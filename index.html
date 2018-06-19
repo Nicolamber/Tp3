@@ -1,0 +1,756 @@
+<!-- Notas Proyecto Hotel San Lorenzo 
+
+-->
+
+<!DOCTYPE html> 
+<html lang="es-Es"> 
+    <head> 
+        <title>Hotel Aconcagua</title> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+        <!-- JqueryMobile CDN 1.3 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.js" type="text/javascript"></script>
+
+        <!-- CSS y JS propios -->
+        <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
+        <script src="jsUsuario/funciones.js" type="text/javascript"></script>
+
+	<!-- JS Reservas-->
+        <script type="text/javascript" src="js/reservas.js"></script>
+
+        <!-- JS Validate, utilizado para la ficha de Reservas-->
+        <script type="text/javascript" src="js/jquery.validate.js"></script>
+
+        <!-- CSS Validate-->
+        <style type="text/css">
+            label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+        </style>
+	
+        <!-- Tour Virtual-->
+        <link href="css/estilosTour.css" rel="stylesheet" type="text/css" />
+        <script src="js/tour.js" type="text/javascript"></script>
+       
+        <!-- JS para el scroll-->
+        <script src="js/jquery.nicescroll.min.js" type="text/javascript"></script>
+	
+	<link href="css/flexslider.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/custom.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                /*Con esta linea, puedo hacer scrolleable una caja. Van dos div, el primero con id = boxscroll4, el segundo dentro del primero con la clase wrapper*/
+                $("#boxscroll4").niceScroll("#boxscroll4 .wrapper", {boxzoom: true});  // hw acceleration enabled when using wrapper
+                //Tengo dos boxscroll, por eso esta linea
+                $("#boxscroll4-2").niceScroll("#boxscroll4-2 .wrapper", {boxzoom: true});  // hw acceleration enabled when using wrapper
+                //Tengo dos boxscroll, por eso esta linea
+                $("#boxscroll4-3").niceScroll("#boxscroll4-3 .wrapper", {boxzoom: true});  // hw acceleration enabled when using wrapper
+                //Tengo dos boxscroll, por eso esta linea
+                $("#boxscroll4-4").niceScroll("#boxscroll4-4 .wrapper", {boxzoom: true});  // hw acceleration enabled when using wrapper
+
+            });
+        </script>
+    </head> 
+
+    <body> 
+
+        <!-- ********************* INDEX ******************** -->
+        <div data-role="page" id="index" data-theme="a">
+            <div data-role="header" class="headerA btnHeader" data-tap-toggle="false">
+		<div class="page-title">HOTEL INGENIERIA DE SOFTWARE</div>
+		<div class="page-subtitle">UTN MENDOZA</div>
+                <a href="#menu" data-theme="a" data-icon="menuizq">&nbsp;</a>
+                <a href="#settings" data-theme="a" data-icon="menuder">&nbsp;</a>
+            </div>
+	    
+            <div data-role="content" class="ui-content">
+                <div class="flex-container sombraLista">
+		    <div class="flexslider">
+			<ul class="slides">
+			    <li style="width: 100%; float: left; margin-right: -100%; display: list-item; ">
+				<img src="images/slider1.jpg">
+				    <p class="flex-caption">Bienvenidos a Mendoza, tierra del sol y del buen vino.</p>
+			    </li>
+			    <li style="width: 100%; float: left; margin-right: -100%; display: none; ">
+				<img src="images/slider2.jpg">
+				<p class="flex-caption">Viñedos, bodegas y atractivos turísticos, todo el año.</p>
+			    </li>
+			    <li style="width: 100%; float: left; margin-right: -100%; display: none; ">
+				<img src="images/slider3.jpg">
+				<p class="flex-caption">Mendoza ofrece múltiples alternativas, cerros, montañas y ríos.</p>
+			    </li>
+			    <li style="width: 100%; float: left; margin-right: -100%; display: none; ">
+				<img src="images/slider4.jpg">
+				<p class="flex-caption">La Cordillera y las aguas termales hacen de Mendoza un placer.</p>
+			    </li>
+			    <li style="width: 100%; float: left; margin-right: -100%; display: none; ">
+				<img src="images/slider5.jpg">
+				<p class="flex-caption">Descubra Mendoza de la mano de un mendocino.</p>
+			    </li>
+			    
+			    
+			</ul>
+			<ol class="flex-control-nav">
+			    <li><a class="">1</a>
+			    </li><li><a class="">2</a>
+			    </li><li><a class="active">3</a>
+			    </li>
+			</ol>
+			
+			<ul class="flex-direction-nav">
+			    <li>
+				<a class="prev" href="#">Previous</a>
+			    </li>
+			    <li>
+				<a class="next" href="#">Next</a>
+			    </li>
+			</ul>
+		    </div>
+		</div>
+		
+		<ul id="lista" data-role="listview" class="marcoBeige colorListas" data-inset="true"></ul>
+            </div>
+
+            <div data-role="footer">
+		<div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="#reservas" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="#contacto" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="#nosotros" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+	    </div>
+            
+            <div data-role="panel" id="menu" data-theme="a">
+                <ul id="listadoMenu" data-role="listview" class="ui-pannel-inner"></ul>
+            </div>
+	    
+            <div data-role="panel" data-position="right" data-theme="a" data-position-fixed="true" data-display="overlay" id="settings">
+                <ul id="listadoMenuSettings" data-role="listview" class="banderas1 ui-pannel-inner">
+                    <li data-role="list-divider" style='text-align: center'>Bienvenidos<br>Seleccione su idioma</li>
+                    <li data-icon="false"><a href="#index"><img src="images/pxt.png" class="ui-li-icon b-argentina"><p> Español</p></a></li>
+                    <li data-icon="false"><a href=""><img src="images/pxt.png"  class="ui-li-icon b-eeuu"><p> Inglés</p></a></li>
+                    <li data-icon="false"><a href=""><img src="images/pxt.png"  class="ui-li-icon b-brazil"><p> Portugués</p></a></li>
+                    <li data-role="list-divider" style='text-align: center' class='separadorAzulDivider'>Contactar</li>
+                </ul>
+            </div>
+        </div>
+	
+        <!-- ********************************** LISTADO HABITACIONES **********************************  -->
+        <div data-role="page" id="listado" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">LISTADO DE</div>
+		<div class="page-subtitle">HABITACIONES</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div><!-- /header -->
+	    
+            <div data-role="content" class="ui-content">
+                <ul data-role="listview" data-inset="true" id="listaHabitaciones" class="marcoBeige colorListas sombraLista"></ul>
+            </div>
+            <!-- Footer !-->
+            <div data-role="footer">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+        </div>
+
+        <!-- ********************************** FICHAS HABITACIONES **********************************  -->
+        <div data-role="page" id="fichas" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">FICHA</div>
+		<div class="page-subtitle">HABITACIONES</div>
+                <a href="#listado" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div><!-- /header -->
+	    
+            <div data-role="content" class="ui-content">
+                <div id="imagenFichaHabitacion" class="ftHabitaciones"></div>
+                    <div class="separador">
+			<h3 id="tituloHabitacion"></h3>
+		    </div>
+		
+                    <div class="panelTexto">
+                        <!-- Caja de Scroll-->
+                        <div id="boxscroll4-3" class="boxscroll4 boxscroll4-3"><!-- Limite de 100 pixeles de altura-->
+                            <div class="wrapper"><!-- Scroll-->
+                                <p id="servicios"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+			<br>
+			<div class="ui-grid-a marcoBeige">
+			    <div class="ui-block-a">
+				<a href="" data-role="button" data-mini="true" data-theme="a" data-iconpos="left" data-icon="telefono">
+				    <span class="ui-btn-text">Llamar</span>
+				    <span class="ui-icon-telefono"></span>
+				</a> 
+			    </div>
+				
+			    <div class="ui-block-b">
+				<a href="" data-role="button" data-mini="true" data-theme="a" data-iconpos="left" data-icon="fotos">
+				    <span class="ui-btn-text">Imágenes</span>
+				    <span class="ui-icon-fotos"></span>
+				</a>
+			    </div>
+			</div>
+			
+			<div class="ui-grid-a marcoBeige">
+			    <div class="ui-block-a">
+				<a href="" data-role="button" data-mini="true" data-theme="a" data-iconpos="left" data-icon="compartime">
+				    <span class="ui-btn-text">Compartime</span>
+				    <span class="ui-icon-compartime"></span>
+				</a>
+
+			    </div>
+				
+			    <div class="ui-block-b">
+				<a href="" data-role="button" data-mini="true" data-theme="a" data-iconpos="left" data-icon="web">
+				    <span class="ui-btn-text">Web</span>
+				    <span class="ui-icon-web"></span>
+				</a>
+			    </div>
+			</div>
+            </div>
+            <!-- Footer !-->
+            <div data-role="footer">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+        </div>
+
+       <!-- ********************************** Ficha Menu Anexos **********************************  -->
+        <div data-role="page" id="fichaMenuAnexos" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">FICHAS</div>
+		<div class="page-subtitle">MENU</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div><!-- /header -->
+	    
+            <div data-role="content" class="ui-content">
+                <div class="separador">
+		    <h3 id="tituloMenuAnexos"></h3>
+		</div>
+		
+                <div class="panelTexto"><!-- Panel donde guardo el texto-->
+                    <!-- Caja de Scroll-->
+                    <div id="boxscroll4" class="boxscroll4"><!-- Limite de 100 pixeles de altura-->
+                        <div class="wrapper"><!-- Scroll-->
+                            <p id="descripcionMenuAnexos"></p><!--- Donde pongo la descripción dinamicamente-->
+                        </div>
+                    </div>
+                </div>
+		
+                <article>
+			<br>
+			<div class="ui-grid-a marcoBeige">
+			    <div class="ui-block-a">
+				<a href="" data-role="button" data-mini="true" data-theme="a" data-iconpos="left" data-icon="compartime">
+				    <span class="ui-btn-text">Compartime</span>
+				    <span class="ui-icon-compartime"></span>
+				</a>
+
+			    </div>
+				
+			    <div class="ui-block-b">
+				<a href="" data-role="button" data-mini="true" data-theme="a" data-iconpos="left" data-icon="web">
+				    <span class="ui-btn-text">Web</span>
+				    <span class="ui-icon-web"></span>
+				</a>
+			    </div>
+			</div>
+		    </article>
+	    </div>
+	    
+            <!-- Footer !-->
+            <div data-role="footer">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+        </div>
+	
+       <!-- ****************************** CONTACTO  **********************************  -->
+	<div id="contacto" data-role="page" data-theme="a">
+	    <div data-role="header" class="headerA">
+                <div class="page-title">FORMULARIO</div>
+		<div class="page-subtitle">CONTACTO</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div><!-- /header -->
+
+	    <div data-role="content" class="ui-content">      
+		<div data-role="collapsible-set" data-theme="c" class="marcoBeige"> 
+                    <div data-role="collapsible" data-content-theme="c"  data-collapsed="false">
+                        <h3>Consultas o Reservas</h3> 
+		<form action="" name="miformulario" method="post" data-mini="true">    
+		    <label for="nombre"></label>
+		    <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre"/>
+
+		    <label for="mail"></label>
+		    <input type="text" name="mail" id="mail" value="" placeholder="E-Mail"/>
+
+		    <label for="telefono"></label>
+		    <input type="text" name="telefono" id="telefono" value="" placeholder="telefono"/>
+
+		    <label for="provincia"></label>
+		    <input type="text" name="provincia" id="provincia" value="" placeholder="Provincia"/>
+
+		    <select name="select" id="select" onChange="submit();" data-icon="arrow-d" data-mini="true" data-theme="a">
+			<option value="Default">Procedencia</option>
+			<option value="">Argentina</option>
+			<option value="">Brasil</option>
+			<option value="">Chile</option>
+			<option value="">Paraguay</option>
+			<option value="">Uruguay</option>
+			<option value="">Otro</option>
+		    </select>
+
+		    <div class="ui-grid-b">
+			<div class="ui-block-a">    
+			    <label for="select-choice-month"></label>
+			    <select name="select-choice-month" id="select-choice-month" data-mini="true" data-theme="a">
+				<option>Mes</option>
+				<option value="enero">Enero</option>
+				<option value="febrero">Febrero</option>
+				<option value="marzo">Marzo</option>
+				<option value="abril">Abril</option>
+				<option value="mayo">Mayo</option>
+				<option value="junio">Junio</option>
+				<option value="julio">Julio</option>
+				<option value="agosto">Agosto</option>
+				<option value="setiembre">Setiembre</option>
+				<option value="octubre">Octubre</option>
+				<option value="noviembre">Noviembre</option>
+				<option value="diciembre">Diciembre</option>
+			    </select>
+                        </div><!-- termina ui block a -->
+
+			<div class="ui-block-b">        
+			    <label for="select-choice-day"></label>
+			    <select name="select-choice-day" id="select-choice-day" data-mini="true" data-theme="a">
+				<option>Dia</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>                    
+			    </select>
+			</div><!-- termina ui block b -->
+
+			<div class="ui-block-c">        
+			    <label for="select-choice-year"></label>
+			    <select name="select-choice-year" id="select-choice-year" data-mini="true" data-theme="a">
+				<option>A&ntildeo</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+			    </select>
+			</div><!-- termina ui block c -->
+		    </div><!-- cierra ui grid-->    
+
+		    <label for="asunto"></label>
+		    <input type="text" name="asunto" id="asunto" value="" placeholder="Asunto"/>
+
+		    <label for="consulta"></label>
+		    <textarea name="mia" id="consulta" placeholder="Consulta" cols="20" rows="10"></textarea>
+
+		    <div class="ui-grid-a">
+			<div class="ui-block-a">     
+			    <button type="submit" data-theme="a" data-mini="true">Cancel</button>
+			</div>
+
+			<div class="ui-block-b">
+			    <button type="submit" data-theme="a" data-mini="true">Enviar</button>    
+			</div>
+		    </div>
+		</form><!-- termina Formulario -->       
+	    </div>
+	</div>
+	</div>
+
+	    <div data-role="footer">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+	</div>
+       
+        <!-- ********************************** TOUR 360 **********************************  -->
+        <div data-role="page" id="tour360" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">TOUR</div>
+		<div class="page-subtitle">360 GRADOS</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <div data-role="content" class="ui-content">
+                <div id="page" >            
+                    <img src="images/atelier.jpg" class="panorama" width="2642" height="375" />
+                </div>    
+            </div>                           
+        </div>
+	
+        <!-- ********************************** SOCIAL MEDIA **********************************  -->
+        <div data-role="page" id="socialMedia" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">SOCIAL</div>
+		<div class="page-subtitle">MEDIA</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <div data-role="content" class="ui-content">
+                <ul data-role="listview" data-mini="true" data-theme="c" class="listaSocialMedia iconos1">
+                    <li><a href="" data-ajax="false"><img src="images/socialMedia/facebook.png" class="ui-li-icon"><p>Facebook</p></a></li>
+                    <li><a href=""><img src="images/socialMedia/twitter.png" class="ui-li-icon"><p>Twitter</p></a></li>
+                    <li><a href=""><img src="images/socialMedia/skype.png" class="ui-li-icon"><p>Skype</p></a></li>
+                </ul>
+            </div>
+            
+	    <div data-role="footer" data-position="fixed">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+        </div>
+	
+        <!-- ********************************** NOSOTROS **********************************  -->
+        <div data-role="page" id="nosotros" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">QUIENES</div>
+		<div class="page-subtitle">SOMOS</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <div data-role="content" class="ui-content">
+            </div>      
+	    
+	    <div data-role="footer" data-position="fixed">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+        </div>
+	
+        <!-- ********************************** Galeria Fotos **********************************  -->
+        <div data-role="page" id="galeriaFotos" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">GALERIA DE</div>
+		<div class="page-subtitle">IMAGENES</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <!-- Contenido-->
+            <div data-role="content" class="ui-content">
+        
+            </div>
+            
+	    <div data-role="footer" data-position="fixed">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+        </div>
+	
+        <!-- ********************************** CONVERSOR MONEDAS **********************************  -->
+        <div data-role="page" id="conversorMonedas" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">CONVERSOR DE</div>
+		<div class="page-subtitle">MONEDAS</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <!-- Contenido-->
+            <div data-role="content" class="ui-content">
+                <!-- Conversor -->
+                <!-- FXEXCHANGERATE.COM EXCHANGE RATE CONVERTER START -->
+                <!--<div class="conversorMonedas">
+                    <div style="width:250px;
+                         height:300px;
+                         border:1px solid #2D6AB4;
+                         background-color:#F0F0F0;">
+                        <div style="background-color:#2D6AB4;
+                             height:18px;
+                             text-align:center;
+                             width:246px; 
+                             margin:2px 0px 0px 2px;
+                             background-image: -webkit-gradient(linear,left top,left bottom,color-stop( 0.01, rgb(68, 68, 68) ), color-stop( rgb(7, 34, 92) ),color-stop( 1, rgb(0, 17, 51) ));
+                             background-image: -webkit-linear-gradient( rgb(25, 54, 114) 1%, rgb(7, 34, 92), rgb(0, 17, 51) 100% );
+                             background-image: -moz-linear-gradient( rgb(25, 54, 114) 1%, rgb(7, 34, 92), rgb(0, 17, 51) 100% );
+                             background-image: -ms-linear-gradient( rgb(25, 54, 114) 1%, rgb(7, 34, 92), rgb(0, 17, 51) 100% );
+                             background-image: -o-linear-gradient( rgb(25, 54, 114) 1%, rgb(7, 34, 92), rgb(0, 17, 51) 100% );
+                             background-image: linear-gradient( rgb(25, 54, 114) 1%, rgb(7, 34, 92), rgb(0, 17, 51) 100% );">
+                            <a target="new" style="color:#FFFFFF;font-size:14px;font-weight:Bold;font-family:arial; text-decoration:none;" href="http://es.fxexchangerate.com/">Conversor de monedas</a>
+                        </div>
+                        <script type="text/javascript">var fm = "USD";
+            var ft = "ARS";
+            var hb = "2D6AB4";
+            var hc = "FFFFFF";
+            var bb = "F0F0F0";
+            var bo = "2D6AB4";
+            var tz = "timezone";
+            var wh = "250x300";
+            var lg = "es";</script>
+                        <script type="text/javascript" src="http://www.fxexchangerate.com/converter.php"></script>
+                    </div>--><!-- FXEXCHANGERATE.COM  EXCHANGE RATE CONVERTER END -->
+            </div>
+
+            <!-- Footer !-->
+            <div data-role="footer">
+                <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+            </div>
+        </div>
+        
+	<!-- ********************* RESERVAS ************************* -->
+        <div data-role="page" id="reservas" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">FORMULARIO DE</div>
+		<div class="page-subtitle">RESERVAS</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <div data-role="content" class="ui-content">
+                <div data-role="collapsible-set" data-theme="c" class="marcoBeige"> 
+                    <div data-role="collapsible" data-content-theme="c"  data-collapsed="false">
+                        <h3>Consultas o Reservas</h3>
+
+                        <form action="PHP/subir.php" id="formReserva" method="post" data-mini="true">    
+
+                            <select name="cuarto" id="cuarto" data-theme="a" data-icon="arrow-d" data-mini="true">
+                                <option>Seleccione</option>
+				<option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>                        
+                            </select>
+
+                            <label for="nombre"></label>
+                            <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre"/>
+
+                            <label for="mail"></label>
+                            <input type="text" name="mail" id="mail" value="" placeholder="E-Mail"/>
+
+                            <label for="telefono"></label>
+                            <input type="text" name="telefono" id="telefono" value="" placeholder="Telefono"/>
+
+                            <label for="pais"></label>
+                            <select name="pais" id="pais" data-icon="arrow-d" data-theme="a" data-mini="true">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Alemania">Alemania</option>
+                            </select>
+
+                            <label for="provincia"></label>
+                            <input type="text" name="provincia" id="provincia" value="" placeholder="Provincia"/>
+
+                            <!-- Desde -->
+                            <div class="separador"><h3>Desde Fecha</h3></div><p></p>
+                            <div class="ui-grid-b noise">
+                                <div class="ui-block-a">    
+                                    <label for="desdeDia"></label>
+                                    <select name="desdeDia" id="desdeDia" data-theme="a" data-mini="true"><option>Dia</option></select>                
+                                </div>
+
+                                <div class="ui-block-b">        
+                                    <label for="desdeMes"></label>
+                                    <select name="desdeMes" id="desdeMes"  data-theme="a" data-mini="true"><option>Mes</option></select>
+                                </div>
+
+                                <div class="ui-block-c">        
+                                    <label for="desdeAnio"></label>
+                                    <select name="desdeAnio" id="desdeAnio" data-theme="a" data-mini="true"><option>Anio</option></select>
+                                </div>
+                            </div>   
+                            <br>
+                            <!-- Hasta-->
+                            <div class="separador masRedondeado azul"><h3>Hasta Fecha</h3></div>
+                            <div class="ui-grid-b">
+                                <div class="ui-block-a">
+                                    <label for="hastaDia"></label>
+                                    <select name="hastaDia" id="hastaDia" data-theme="a" data-mini="true"><option>Dia</option></select>
+                                </div>
+
+                                <div class="ui-block-b">                               
+                                    <label for="hastaMes"></label>
+                                    <select name="hastaMes" id="hastaMes" data-theme="a" data-mini="true"><option>Mes</option></select>
+                                </div>
+
+                                <div class="ui-block-c">        
+                                    <label for="hastaAnio"></label>
+                                    <select name="hastaAnio" id="hastaAnio" data-theme="a" data-mini="true"><option>Anio</option></select>
+                                </div>
+                            </div>  
+
+                            <label for="asunto"></label>
+                            <input type="text" name="asunto" id="asunto" value="" placeholder="Asunto"/>
+
+                            <label for="consulta"></label>
+                            <textarea name="consulta" id="consulta" placeholder="Consulta" cols="20" rows="10"></textarea>
+
+                            <div class="ui-grid-a noise">
+                                <div class="ui-block-a">     
+                                    <button type="reset" data-theme="a" data-mini="true">Cancel</button>
+                                </div>
+
+                                <div class="ui-block-b">
+                                    <button type="submit" data-theme="a" aria-disabled="false" data-mini="true">Enviar</button>    
+                                </div>
+                            </div>   
+
+                        </form> <!-- termina formulario -->   
+                    </div> <!-- termina listview -->
+                </div> <!-- termina lista colapsable --> 
+            </div><!-- /Content -->
+	    
+	    <div data-role="footer">
+		<div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="#reservas" id="tabB" data-icon="custom" class="ui-btn-active">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+	    </div>
+	    
+        </div>
+        <!-- ********************* RSS  ************************** -->
+        <div data-role="page" id="rss" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">ULTIMAS NOTICIAS</div>
+		<div class="page-subtitle">RSS</div>
+                <a href="#index" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <div data-role="content">
+                <ul data-role="listview" data-filter="true" id="articleList"></ul>
+            </div>
+        </div>
+	
+        <!-- *********************** FICHA RSS ********************* -->
+        <div data-role="page" id="fichaRss" data-theme="a">
+            <div data-role="header" class="headerA">
+                <div class="page-title">ULTIMAS NOTICIAS</div>
+		<div class="page-subtitle">RSS</div>
+                <a href="#rss" data-rel="back" data-theme="a">Volver</a>
+                <a href="#index" data-theme="a">Home</a>
+            </div>
+	    
+            <div data-role="content"  class="ui-content">
+                <div class="agrandar separador redondeado azul mayuscula">
+		    <h3 id="tituloDescripcionRss"></h3></div>
+                <div class="panelTexto"><!-- Panel donde guardo el texto-->
+                    <!-- Caja de Scroll-->
+                    <div id="boxscroll4-2" class="boxscroll4" style="max-height: 100px;"><!-- Limite de 100 pixeles de altura-->
+                        <div class="wrapper"><!-- Scroll-->
+                            <p id="descripcionFichaRss"></p><!--- Donde pongo la descripción dinamicamente-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+	    
+	    <div data-role="footer">
+	    <div class="separadorDireccion"><h3>SAN LORENZO 545 | MENDOZA</h3></div>
+		<div data-role="navbar">
+		    <ul>
+			<li><a href="" id="tabA" data-icon="custom">Como Llegar</a></li>
+			<li><a href="" id="tabB" data-icon="custom">Reservas</a></li>
+			<li><a href="" id="tabC" data-icon="custom">Contacto</a></li>
+			<li><a href="" id="tabD" data-icon="custom">Nosotros</a></li>
+		    </ul>
+		</div>
+	    </div>
+        </div>
+    </body>
+</html>

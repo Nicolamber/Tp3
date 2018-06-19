@@ -1,0 +1,587 @@
+/* ======================================================
+PAGINA
+====================================================== */
+.ui-content {
+    max-width: 480px;
+    min-height: 491px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Color principal de paleta: #755A3F
+
+/* ======================================================
+HEADER
+====================================================== */
+.headerA{
+    height: 47px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom-color: black;
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2), 0px 1px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2), 0px 1px 5px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2), 0px 1px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2), 0px 1px 5px rgba(0, 0, 0, 0.75);
+    background-image: linear-gradient(#755A3F);
+    background-image: -o-linear-gradient(#755A3F);
+    background-image: -moz-linear-gradient(#755A3F);
+    background-image: -webkit-linear-gradient(#755A3F);
+    background-image: -ms-linear-gradient(#755A3F);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.01, #4B3826), 
+	color-stop(0.5, #5A432D),
+        color-stop(1, #7D6044)
+        );
+}
+
+.ui-header .ui-btn-inner {
+    border: 0 none;
+}
+
+a[data-rel='back'], .ui-header a[data-rel='back'] {
+    background: transparent url(../images/backButtonSprite.png) 0 0 no-repeat !important;
+    -webkit-box-shadow: none !important; 
+    -moz-box-shadow: none !important; 
+    box-shadow: none !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    border: 0 none !important;
+    height: 30px;
+}
+
+a[data-rel='back'] .ui-btn-inner {
+    background: transparent url(../images/backButtonSprite.png) right 0 no-repeat !important;
+    margin: 0 0 0 15px;
+    padding: 0 8px 0 0 !important;
+    height: 30px;
+    line-height: 30px;
+    -webkit-box-shadow: none !important; 
+    -moz-box-shadow: none !important; 
+    box-shadow: none !important;
+}
+
+.ui-bar-a a[data-rel='back'] {
+    background-position: 0 -30px !important;
+}
+
+.ui-bar-a a[data-rel='back'] .ui-btn-inner {
+    background-position: right -30px !important;
+}
+
+.ui-header .ui-btn {
+    border-color: #375074;
+    top: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.ui-header .ui-btn .ui-btn-inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.ui-header .ui-btn-up-a, .ui-header .ui-btn-hover-a  {
+    border-color: #000;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+    background: #6a6a6a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #6a6a6a 0%, #313131 49%, #000000 50%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6a6a6a), color-stop(49%,#313131), color-stop(50%,#000000), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #6a6a6a 0%,#313131 49%,#000000 50%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #6a6a6a 0%,#313131 49%,#000000 50%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #6a6a6a 0%,#313131 49%,#000000 50%,#000000 100%); /* IE10+ */
+    background: linear-gradient(top,  #6a6a6a 0%,#313131 49%,#000000 50%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a6a6a', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.btnHeader .ui-btn-left{
+    border-radius: 3px;/*Esto afecta al borde redondeado al rededor del boton*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 36px;/*Esto afecta al ancho del boton*/
+}
+
+.ui-icon-menuizq{
+    background: url(../images/menu.png);
+    width: 30px;/*Esto afecta al tamaño de la imagen*/
+    height: 30px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-box-shadow: none;/*Quito el circulo de los iconos*/
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-size: 26px 20px;
+    background-position: 0 -.2em;/*Esto afecta a la posicion dentro del boton*/
+    background-repeat: no-repeat;
+}
+
+.btnHeader .ui-btn-right{
+    border-radius: 3px;/*Esto afecta al borde redondeado al rededor del boton*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 36px;/*Esto afecta al ancho del boton*/
+}
+
+.ui-icon-menuder{
+    background: url(../images/settings.png);
+    width: 30px;/*Esto afecta al tamaño de la imagen*/
+    height: 30px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-box-shadow: none;/*Quito el circulo de los iconos*/
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-size: 20px 20px;
+    background-position: .25em 0;/*Esto afecta a la posicion dentro del boton*/
+    background-repeat: no-repeat;
+}
+
+/* SPRITE MENU LATERAL IDIOMAS */
+.banderas1 img{
+    width: 16px;
+    height: 12px;
+    -moz-background-size: 48px 12px;
+    background-image: url(../images/banderas1.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 48px 12px;
+    background-color: transparent;
+}
+
+.banderas1 .b-brazil{
+    background-position: 0px 0px;
+    -ms-background-position-x: 0px;
+}
+
+.banderas1 .b-argentina{
+    background-position: -16px 0px;
+    -ms-background-position-x: 16px;
+}
+
+.banderas1 .b-eeuu{
+    background-position: -32px 0px;
+    -ms-background-position-x: 32px;
+}
+
+/* ======================================================
+PANELES LATERALES
+====================================================== */
+.ui-pannel-inner li {
+    color: white;
+    border-color: #755A3F;
+    text-shadow: none;
+    font-weight: lighter;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    white-space: normal;
+    text-align: center;
+    background-image: linear-gradient(#978B7C);
+    background-image: -o-linear-gradient(#978B7C);
+    background-image: -moz-linear-gradient(#978B7C);
+    background-image: -webkit-linear-gradient(#978B7C);
+    background-image: -ms-linear-gradient(#978B7C);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.01, #978B7C)
+        );
+}
+
+.ui-pannel-inner li p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+    font-weight: lighter;
+    text-shadow: none;
+    display: table-cell;
+}
+
+/* ======================================================
+FOOTER
+====================================================== */
+.ui-footer {
+    border-color: #0d0d0d;
+    background: #2d2d2d; 
+    background: -moz-linear-gradient(top,  #2d2d2d 0%, #151515 49%, #000000 50%, #000000 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2d2d2d), color-stop(49%,#151515), color-stop(50%,#000000), color-stop(100%,#000000)); 
+    background: -webkit-linear-gradient(top,  #2d2d2d 0%,#151515 49%,#000000 50%,#000000 100%); 
+    background: -o-linear-gradient(top,  #2d2d2d 0%,#151515 49%,#000000 50%,#000000 100%); 
+    background: -ms-linear-gradient(top,  #2d2d2d 0%,#151515 49%,#000000 50%,#000000 100%);
+    background: linear-gradient(top,  #2d2d2d 0%,#151515 49%,#000000 50%,#000000 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#000000',GradientType=0 ); 
+
+}
+
+.ui-footer .ui-btn {
+    border: 0 none;
+    background: transparent;
+}
+
+.ui-footer .ui-btn-active {
+    background: none rgba(255,255,255,0.14);
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+}
+
+.ui-footer .ui-btn-inner {
+    border-color: #434343;
+    padding-top: 40px !important;
+}
+
+.ui-footer .ui-btn-text {
+    font-size: 10px;
+    text-shadow: 1px;
+    color: #BDBCBB;
+}
+
+.ui-footer .ui-icon-custom.ui-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+}
+
+.ui-footer .ui-icon-shadow {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+#tabA .ui-icon {
+    background: url('../images/spriteFooter.png') 0 0 no-repeat;
+}
+
+#tabA.ui-btn-active .ui-icon {
+    background: url('../images/spriteFooter.png') -31px 0 no-repeat;
+}
+
+#tabB .ui-icon {
+    background: url('../images/spriteFooter.png') 0 -32px no-repeat;
+}
+
+#tabB.ui-btn-active .ui-icon {
+    background: url('../images/spriteFooter.png') -31px -32px no-repeat;
+}
+
+#tabC .ui-icon {
+    background: url('../images/spriteFooter.png') 0 -57px no-repeat;
+}
+
+#tabC.ui-btn-active .ui-icon {
+    background: url('../images/spriteFooter.png') -31px -57px no-repeat;
+}
+
+#tabD .ui-icon {
+    background: url('../images/spriteFooter.png') 0 -88px no-repeat;
+}
+
+#tabD.ui-btn-active .ui-icon {
+    background: url('../images/spriteFooter.png') -31px -88px no-repeat;
+}
+
+/* ======================================================
+LISTAS
+====================================================== */
+.sombraLista {
+    -webkit-box-shadow: 0px 0px 8px ;
+}
+
+.colorListas li {
+    color: white;
+    border: transparent;
+    text-shadow: none;
+    font-weight: lighter;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    white-space: normal;
+    text-align: center;
+    
+    /*
+    background-image: linear-gradient(#978B7C);
+    background-image: -o-linear-gradient(#978B7C);
+    background-image: -moz-linear-gradient(#978B7C);
+    background-image: -webkit-linear-gradient(#978B7C);
+    background-image: -ms-linear-gradient(#978B7C);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.01, #978B7C)
+        );
+    */
+    
+    border-color: #0d0d0d;
+    background: #DCCAB2; 
+    background: -moz-linear-gradient(top, #DCCAB2 0%, #A99B8A 49%, #A99B8A 50%, #978B7C 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DCCAB2), color-stop(49%,#A99B8A), color-stop(50%,#A99B8A), color-stop(100%,#978B7C)); 
+    background: -webkit-linear-gradient(top,  #DCCAB2 0%,#A99B8A 49%,#A99B8A 50%,#978B7C 100%); 
+    background: -o-linear-gradient(top,  #DCCAB2 0%,#A99B8A 49%,#A99B8A 50%,#978B7C 100%); 
+    background: -ms-linear-gradient(top,  #DCCAB2 0%,#A99B8A 49%,#A99B8A 50%,#978B7C 100%);
+    background: linear-gradient(top,  #DCCAB2 0%,#A99B8A 49%,#A99B8A 50%,#978B7C 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DCCAB2', endColorstr='#978B7C',GradientType=0 ); 
+}
+
+.colorListas p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+    font-weight: lighter;
+    text-shadow: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul#listadoMenu .ui-li-divider.ui-bar-b{
+    background-color: black;
+    background-image: none;
+}
+
+ul#lista .ui-li-divider.ui-bar-b{
+    background-color: black;
+    background-image: none;
+}
+
+
+ul#listaHabitaciones .ui-li-divider.ui-bar-b{
+    background-color: black;
+    background-image: none;
+}
+
+ul#listadoMenuSettings .ui-li-divider.ui-bar-b {
+    background-color: black;
+    background-image: none; 
+    border: transparent;
+}
+
+/* ======================================================
+BOTONES
+====================================================== */
+.ui-grid-a {
+    margin: 1em 0 0}
+
+.ui-grid-a .ui-btn {
+    margin: 0}
+
+.ui-block-a .ui-btn {
+    margin-right: .25em}
+
+.ui-block-b .ui-btn {
+    margin-left: .25em}
+
+.ui-btn-corner-all {
+    -moz-border-radius: .6em;
+    -webkit-border-radius: .6em;
+    border-radius: .6em;}
+
+.ui-icon-telefono {
+    background: url("../images/telefonoGrid.png") no-repeat rgba(0, 0, 0, 0.4) !important;}
+
+.ui-icon-fotos {
+    background: url("../images/fotosGrid.png") no-repeat rgba(0, 0, 0, 0.4) !important;}
+
+.ui-icon-compartime {
+    background: url("../images/faceGrid.png") no-repeat rgba(0, 0, 0, 0.4) !important;}
+
+.ui-icon-web {
+    background: url("../images/webGrid.png") no-repeat rgba(0, 0, 0, 0.4) !important;}
+
+
+
+/* ======================================================
+SCROLL
+====================================================== */
+.boxscroll4 {/*Estilo que le aplico a la caja con scroll*/
+    height: 300px;
+    margin-top: 0px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 20px;
+    color: inherit;
+    overflow: auto;
+    /*No utilizar overflow-x:.. porque al poner el celular en horizontal, no se va a mover el scroll*/
+}
+
+.boxscroll4-3 {/*Estilo que le aplico a la caja con scroll*/
+    height: 200px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* ======================================================
+TEXTOS
+====================================================== */
+.page-title{
+    font-family: "Verdana","Times New Roman",Times,serif; 
+    font-size: 14px;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 8px;
+    font-weight: bold;
+}
+
+.page-subtitle {
+    font-family: "Verdana","Times New Roman",Times,serif; 
+    font-size: 12px;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 9px;
+    font-weight: normal;
+}
+
+/* ======================================================
+IMAGENES
+====================================================== */
+/* === SPRITE LISTA INDEX === */
+.spriteIndex img{
+    width: 80px;
+    height: 100%;
+    -moz-background-size: 960px 102px;
+    background-image: url(../images/spriteListado.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 960px 100%;
+    background-color: transparent;
+    display: block;   
+}
+
+.l1{
+    background-position: 0px 0px;
+    -ms-background-position-x: 0px;
+}
+
+.l2{
+    background-position: -560px 0px;
+    -ms-background-position-x: 560px;
+}
+
+.l3{
+    background-position: -560px 0px;
+    -ms-background-position-x: 560px;
+}
+
+.l4{
+    background-position: -640px 0px;
+    -ms-background-position-x: 640px;
+}
+
+.l5{
+    background-position: -480px 0px;
+    -ms-background-position-x: 480px;
+}
+
+.l6{
+    background-position: -880px 0px;
+    -ms-background-position-x: 880px;
+}
+
+
+/* ======================================================
+ELEMENTOS GRAFICOS (separadores, etc...)
+====================================================== */
+.separador{
+    height: 30px;
+    border-radius: .3em;
+    border: 1px solid #808080;
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ -1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #000 /*{a-bar-shadow-color}*/;
+    background-image: linear-gradient(#978B7C);
+    background-image: -o-linear-gradient(#978B7C);
+    background-image: -moz-linear-gradient(#978B7C);
+    background-image: -webkit-linear-gradient(#978B7C);
+    background-image: -ms-linear-gradient(#978B7C);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.01, #978B7C)
+        );
+    z-index: 100;
+}
+
+.separador h3 {
+    margin-top: 0;
+    text-align: center;
+    text-shadow: none;
+    color: white;
+    padding-top: 7px;
+    white-space: normal;
+    font-size: 12px;
+}
+
+.cabeceraMenuNavegacion .ui-bar-a {
+    border: 1px solid #808080;
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ -1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #000 /*{a-bar-shadow-color}*/;
+    background-image: linear-gradient(#978B7C);
+    background-image: -o-linear-gradient(#978B7C);
+    background-image: -moz-linear-gradient(#978B7C);
+    background-image: -webkit-linear-gradient(#978B7C);
+    background-image: -ms-linear-gradient(#978B7C);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.01, #978B7C)
+        );
+}
+
+.separadorDireccion{
+    height: 30px;
+    background-image: linear-gradient(#755A3F);
+    background-image: -o-linear-gradient(#755A3F);
+    background-image: -moz-linear-gradient(#755A3F);
+    background-image: -webkit-linear-gradient(#755A3F);
+    background-image: -ms-linear-gradient(#755A3F);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.01, #4B3826), 
+	color-stop(0.5, #5A432D),
+        color-stop(1, #7D6044)
+        );
+    z-index: 100;
+}
+
+.separadorDireccion h3 {
+    margin-top: 0;
+    text-align: center;
+    text-shadow: none;
+    color: white;
+    padding-top: 7px;
+    white-space: normal;
+    font-size: 12px;
+}
+
+/* Marco para los botones en grid */
+.marcoBeige {
+    padding: .20em;
+    border-radius: .55em;
+    background: #847A6E;
+    background: rgba(143,136,126,.8);
+    background-image:-moz-linear-gradient(rgb(143,136,126),rgba(73,64,55,.9));
+    background-image:-webkit-gradient(linear,left top,left bottom,from(rgb(143,136,126)),to(rgba(73,64,55,.9)));
+    background-image:-webkit-linear-gradient(rgb(143,136,126),rgba(73,64,55,.9));
+    background-image:-ms-linear-gradient(rgba(143,136,126,.7),rgba(73,64,55,.9));
+    background-image:-o-linear-gradient(rgba(143,136,126,.7),rgba(73,64,55,.9));
+    background-image:linear-gradient(rgba(143,136,126,.7),rgba(73,64,55,.9));}
+
